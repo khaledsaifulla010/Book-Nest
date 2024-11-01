@@ -3,7 +3,6 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1 className="font-black text-5xl ">Hello</h1>
     </>
   );
 }
