@@ -70,7 +70,7 @@ const BookDetails = () => {
             {yearOfPublishing}
           </h2>
           <h2 className="text-base font-bold  mt-2 flex gap-1 items-center">
-            <span className="text-slate-500"> Year of Publishing :</span>
+            <span className="text-slate-500"> Ratings :</span>
             {rating} <FaStar></FaStar>
           </h2>
           <div className="flex items-center gap-4 mt-8">
