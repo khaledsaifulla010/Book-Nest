@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
+import { addToReadList } from "../../utility/AddToDB/AddToDB";
 const BookDetails = () => {
   const { bookId } = useParams();
 
@@ -25,6 +26,10 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = book;
+
+  const handleToReadList = (bookId) => {
+    addToReadList(bookId);
+  };
 
   return (
     <div>
@@ -69,7 +74,10 @@ const BookDetails = () => {
             {rating} <FaStar></FaStar>
           </h2>
           <div className="flex items-center gap-4 mt-8">
-            <button className="border-2 border-green-400 font-black text-lg p-2 rounded-xl  w-24">
+            <button
+              onClick={() => handleToReadList(bookId)}
+              className="border-2 border-green-400 font-black text-lg p-2 rounded-xl  w-24"
+            >
               Read
             </button>
             <button className="border-2 text-green-400 font-black text-lg p-2 rounded-xl  w-36">
