@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { addToReadList } from "../../utility/AddToDB/AddToDB";
+
 const BookDetails = () => {
   const { bookId } = useParams();
 
@@ -29,6 +30,7 @@ const BookDetails = () => {
 
   const handleToReadList = (bookId) => {
     addToReadList(bookId);
+    toast.success(`Added ${bookName} in ReadList`);
   };
 
   return (
