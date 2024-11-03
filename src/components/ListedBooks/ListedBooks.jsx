@@ -52,6 +52,12 @@ const ListedBooks = () => {
       );
       setReadList(sortedReadListByNoOfPages);
     }
+    if (sortType === "Rating") {
+      const sortedReadListByRating = [...readList].sort(
+        (a, b) => b.rating - a.rating
+      );
+      setReadList(sortedReadListByRating);
+    }
   };
 
   return (
