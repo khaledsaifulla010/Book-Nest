@@ -58,6 +58,13 @@ const ListedBooks = () => {
       );
       setReadList(sortedReadListByRating);
     }
+
+    if (sortType === "Publishing Year") {
+      const sortedReadListByPublishingYear = [...readList].sort(
+        (a, b) => b.yearOfPublishing - a.yearOfPublishing
+      );
+      setReadList(sortedReadListByPublishingYear);
+    }
   };
 
   return (
@@ -91,6 +98,9 @@ const ListedBooks = () => {
                 </li>
                 <li onClick={() => handleSortType("No of Pages")}>
                   <a>No of Pages</a>
+                </li>
+                <li onClick={() => handleSortType("Publishing Year")}>
+                  <a>Publishing Year</a>
                 </li>
               </ul>
             </div>
