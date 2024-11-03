@@ -28,6 +28,7 @@ const addToReadList = (id) => {
   if (storedList.includes(id)) {
     toast.error("Already Added This Book!")
   } else {
+    
     storedList.push(id);
     const storedListString = JSON.stringify(storedList);
     localStorage.setItem("read-list", storedListString);
