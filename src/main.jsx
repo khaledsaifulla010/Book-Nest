@@ -13,11 +13,13 @@ import PagesToRead from "./components/PagesToRead/PagesToRead";
 import BookDetails from "./components/BookDetails/BookDetails";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
   },
   {
     path: "/",
