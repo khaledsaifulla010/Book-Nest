@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import { addToReadList } from "../../utility/AddToDB/AddToDB";
-
+import { addToReadList, addToWishList } from "../../utility/AddToDB/AddToDB";
+import { toast } from "react-toastify";
 const BookDetails = () => {
   const { bookId } = useParams();
 
@@ -31,6 +31,11 @@ const BookDetails = () => {
   const handleToReadList = (bookId) => {
     addToReadList(bookId);
     toast.success(`Added ${bookName} in ReadList`);
+  };
+
+  const handleToWishList = (bookId) => {
+    addToWishList(bookId);
+    toast.success(`Added ${bookName} in WishList`);
   };
 
   return (
@@ -82,7 +87,10 @@ const BookDetails = () => {
             >
               Read
             </button>
-            <button className="border-2 text-green-400 font-black text-lg p-2 rounded-xl  w-36">
+            <button
+              onClick={() => handleToWishList(bookId)}
+              className="border-2 text-green-400 font-black text-lg p-2 rounded-xl  w-36"
+            >
               Wish List
             </button>
           </div>

@@ -31,6 +31,7 @@ const addToReadList = (id) => {
     storedList.push(id);
     const storedListString = JSON.stringify(storedList);
     localStorage.setItem("read-list", storedListString);
+    
   }
 };
 const addToWishList = (id) => {

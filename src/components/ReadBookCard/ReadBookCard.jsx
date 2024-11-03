@@ -8,14 +8,13 @@ const ReadBookCard = ({book}) => {
        rating,
        category,
        tags,
-       review,
        totalPages,
        publisher,
        yearOfPublishing,
      } = book;
     return (
       <div>
-        <div className=" w-[1300px] ml-[50px] border-2 h-[350px] mb-12 mt-12  flex gap-12">
+        <div className=" w-[1300px] ml-[50px] border-2 h-[350px] mb-12 mt-12 rounded-xl  flex gap-12">
           <div>
             <img
               className="w-[300px] h-[300px] mt-8 ml-8 rounded-xl"
@@ -47,7 +46,7 @@ const ReadBookCard = ({book}) => {
                 {totalPages}
               </h2>
             </div>
-            <div className="divider w-[800px]"></div>
+            <div className="divider w-[900px]"></div>
 
             <div className="flex items-center gap-4  font-bold text-base mt-4">
               <h2 className="text-base font-bold text-green-500 ">
